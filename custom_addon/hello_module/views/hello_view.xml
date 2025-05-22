@@ -1,0 +1,24 @@
+<odoo>
+    <record id="view_hello_form" model="ir.ui.view">
+        <field name="name">hello.form</field>
+        <field name="model">hello.model</field>
+        <field name="arch" type="xml">
+            <form string="Hello Thai Hoang">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_hello" model="ir.actions.act_window">
+        <field name="name">Hello</field>
+        <field name="res_model">hello.model</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_hello_root" name="Thai Hoang GmbH"/>
+    <menuitem id="menu_hello" name="Hello" parent="menu_hello_root" action="action_hello"/>
+</odoo>
