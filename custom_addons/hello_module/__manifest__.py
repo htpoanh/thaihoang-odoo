@@ -7,4 +7,5 @@
     'data': ['views/hello_view.xml'],
     'installable': True,
     'auto_install': False,
+    #small change to triggerbuild
 }
