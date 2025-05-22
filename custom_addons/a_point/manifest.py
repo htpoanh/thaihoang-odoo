@@ -3,7 +3,7 @@
     "summary": "Customer loyalty points management across Thái Hoàng company business units",
     "version": "1.0",
     "category": "Sales",
-    "author": "Your Company",
+    "author": "Thai Hoang GmbH",
     "website": "https://yourcompany.example",
     "license": "AGPL-3",
     "depends": ["base", "sale_management", "point_of_sale"],
