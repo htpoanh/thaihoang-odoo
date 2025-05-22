@@ -1,0 +1,52 @@
+<odoo>
+    <record id="view_loyalty_form" model="ir.ui.view">
+        <field name="name">customer.loyalty.form</field>
+        <field name="model">customer.loyalty</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="partner_id"/>
+                    <field name="points"/>
+                    <field name="description"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_loyalty_tree" model="ir.ui.view">
+        <field name="name">customer.loyalty.tree</field>
+        <field name="model">customer.loyalty</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="partner_id"/>
+                <field name="points"/>
+                <field name="description"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_redemption_tree" model="ir.ui.view">
+        <field name="name">gift.redemption.tree</field>
+        <field name="model">gift.redemption</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="partner_id"/>
+                <field name="gift_name"/>
+                <field name="points_used"/>
+                <field name="date"/>
+            </tree>
+        </field>
+    </record>
+
+    <menuitem id="menu_loyalty_root" name="Loyalty"/>
+    <menuitem id="menu_loyalty_points" name="Customer Points" parent="menu_loyalty_root"/>
+    <menuitem id="menu_loyalty_redeem" name="Redemptions" parent="menu_loyalty_root"/>
+
+    <act_window id="action_loyalty_points" name="Customer Points"
+                res_model="customer.loyalty" view_mode="tree,form"
+                menu_id="menu_loyalty_points"/>
+
+    <act_window id="action_gift_redemption" name="Gift Redemptions"
+                res_model="gift.redemption" view_mode="tree"
+                menu_id="menu_loyalty_redeem"/>
+</odoo>
