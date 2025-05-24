@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_partner_form_inherit_loyalty" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit.loyalty</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="inside">
+                <group string="Loyalty">
+                    <field name="customer_code"/>
+                    <field name="loyalty_points" readonly="1"/>
+                </group>
+            </xpath>
+        </field>
+        <field name="type">form</field>
+    </record>
+</odoo>
